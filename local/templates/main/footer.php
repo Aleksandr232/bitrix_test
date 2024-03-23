@@ -3,60 +3,40 @@
     use \Bitrix\Main\Page\Asset;
 ?>
 
- <footer>
-        <div class="footer_divider"></div>
-        <div class="footer_wrapper">
-            <!-- Если не оборачивать каждый блок в обертку - получится криво -->
-            <div>
-                <div class="footer_social">
-                    <a href="#" class="footer_social_item">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="footer_social_item">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="footer_social_item">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="footer_social_item">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-            <div>
-                <div class="footer_links">
-                    <div class="footer_links_main">
-                        <a href="#">на главную</a>
-                        <a href="#">города</a>
-                        <a href="#">для водителей</a>
-                    </div>
-                    <div class="footer_links_sub">
-                        <a href="#">центр поддержки</a>
-                        <a href="#">вакансии</a>
-                        <a href="#">разработчики</a>
-                        <a href="#">блог</a>
-                        <a href="#">о нас</a>
-                    </div>
-                    <a href="#" class="footer_links_lang">Русский</a>
-                </div>
-            </div>
-            <div>
-                <div class="footer_mobile">
-                    <a href="#">
-                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/app_store.png" alt="App Store">
-                    </a>
-                    <a href="#">
-                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/google_play.png" alt="Google play">
-                    </a>
-                    <a href="#">
-                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/windows_store.png" alt="Windows store">
-                    </a>
-                </div>
-            </div>
+<footer>
+    <div class="wrapper">
+      <div class="footer">
+        <div class="footer__sources">
+          <img class="footer__logo" src="<?=SITE_TEMPLATE_PATH;?>/assets/img/whiteLogo.svg" alt="whiteLogo">
+          <div class="footer__icon-list">
+            <a class="footer__icon" href="https://www.youtube.com/"><img src="<?=SITE_TEMPLATE_PATH;?>/assets/img/youtube.svg" alt="youtube"></a><a class="footer__icon" href="https://web.telegram.org"><img src="<?=SITE_TEMPLATE_PATH;?>/assets/img/telegram.svg" alt="telegram"></a><a class="footer__icon" href="https://vk.com"><img src="<?=SITE_TEMPLATE_PATH;?>/assets/img/vk.svg" alt="vk"></a>
+          </div>
         </div>
-    </footer>
-    <?php
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/script.js");
-    ?>
+        <nav>
+          <ul class="footer__nav">
+            <li class="footer__nav-item">
+              <a class="link" href="#">О нас</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link" href="#projects">Проекты</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link" href="#news">Новости</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link" href="#faq">FAQ</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="link" href="#subscribe">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__info">
+          <a>г. Горгород,<br>
+          ул. Мегаполисная, 1</a> <a class="link" href="tel:+70000000000">+7 (000) 000-00-00</a> <a class="link" href="mailto:john@example.com">email@email.ru</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

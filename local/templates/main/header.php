@@ -12,53 +12,52 @@
         Asset::getInstance()->addString('<meta http-equiv="X-UA-Compatible" content="ie=edge">');
     ?>
     <title><?php $APPLICATION->ShowTitle();?></title>
-    <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH;?>/icons/favicon.ico" type="image/x-icon">
     <?php
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.min.css");
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap-reboot.min.css");
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap-grid.min.css");
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "https://use.fontawesome.com/releases/v5.8.2/css/all.css");
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/assets/css/style.css");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "https://fonts.googleapis.com");
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "https://fonts.gstatic.com");
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/assets/js/bundle.js");
     ?>
 </head>
 <body>
     <div id="#panel"><?php $APPLICATION->ShowPanel();?></div>
     <header>
-        <nav>
-            <div class="container">
-                <ul class="menu">
-                    <li class="menu_item"><a href="#" class="menu_link">Главная</a></li>
-                    <li class="menu_item"><a href="#require" class="menu_link">Со своим автомобилем</a></li>
-                    <li class="menu_item"><a href="#require" class="menu_link">На автомобиле компании</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">Требования</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">Оставить заявку</a></li>
-                </ul>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-        <div class="subheader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 col-md-4 offset-md-1">
-                        <a href="#" class="subheader_logo"><img src="<?=SITE_TEMPLATE_PATH;?>/icons/logo.png" alt="logo"></a>
-                        <div class="subheader_official">Официальный партнер Uber в Москве</div>
-                    </div>
-    
-                    <div class="xs-hidden col-md-3 offset-md-1 col-xl-2 offset-xl-2">
-                        <div class="subheader_call">Звоните нам ежедневно</div>
-                        <a href="tel:84957970988" class="subheader_phone">8 495 797 09 88</a>
-                    </div>
-    
-                    <div class="col-md-3">
-                        <a href="tel:84957970988" class="xs-visible subheader_phone">8 495 797 09 88</a>
-                        <button class="subheader_btn">заказать звонок</button>
-                    </div>
+    <div class="wrapper">
+      <div class="header">
+        <img class="header__logo" src="<?=SITE_TEMPLATE_PATH;?>/assets/img/Logo.svg" alt="Logo">
+        <div class="header__menu">
+          <nav>
+            <ul class="header__nav">
+              <li class="header__nav-item header__nav-item_paragraph">
+                <div class="header__nav-point"><a href="#">О нас</a> <img class="arrow" src="<?=SITE_TEMPLATE_PATH;?>/assets/img/Arrow.svg" alt="Arrow"></div>
+                <div class="header__links">
+                  <div class="header__links-wrapper">
+                    <a class="link">О 500на700</a> <a class="link">Документы</a> <a class="link">Устойчивое развитие</a> <a class="link">Команда</a> <a class="link">Стратегия</a>
+                  </div>
                 </div>
-            </div>
+              </li>
+              <li class="header__nav-item header__nav-item_paragraph">
+                <div class="header__nav-point"><a href="#projects">Проекты</a> <img class="arrow" src="<?=SITE_TEMPLATE_PATH;?>/assets/img/Arrow.svg" alt="Arrow"></div>
+                <div class="header__links">
+                  <div class="header__links-wrapper">
+                    <a class="link">О 500на700</a> <a class="link">Документы</a> <a class="link">Устойчивое развитие</a> <a class="link">Команда</a> <a class="link">Стратегия</a>
+                  </div>
+                </div>
+              </li>
+              <li class="header__nav-item">
+                <a class="link" href="#news">Новости</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="link" href="#faq">FAQ</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="link" href="#subscribe">Контакты</a>
+              </li>
+            </ul>
+          </nav><button class="button_white button_open-modal">Связаться с нами</button>
         </div>
-    </header>
+        <div class="burger burger_main"></div>
+      </div>
+    </div>
+  </header>
